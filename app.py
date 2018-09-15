@@ -54,7 +54,6 @@ def register():
     email = request.args.get("email")
     phone = request.args.get("phone")
     username = firstname[0] + lastname + "0"
-    nametaken = True
     while username in userbase:
         username = username[:-1] + str(1 + int(username[-1]))
     userbase["username"] = {"username": username,"firstname": firstname,"lastname": lastname,"email": email,"phone": phone}
